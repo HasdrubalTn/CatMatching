@@ -2,11 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="nunit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MS.CatMatching.Contracts\MS.CatMatching.Contracts.csproj" />
-    <ProjectReference Include="..\MS.CatMatching.DataAccess\MS.CatMatching.DataAccess.csproj" />
+    <ProjectReference Include="..\MS.CatMatching.Core\MS.CatMatching.Core.csproj" />
     <ProjectReference Include="..\MS.CatMatching.Entities\MS.CatMatching.Entities.csproj" />
   </ItemGroup>
 

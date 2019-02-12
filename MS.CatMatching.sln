@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.Core", "MS.CatMatching.Core\MS.CatMatching.Core.csproj", "{57AE9E50-7084-4455-9BCA-700993F024C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS.CatMatching.Core", "MS.CatMatching.Core\MS.CatMatching.Core.csproj", "{57AE9E50-7084-4455-9BCA-700993F024C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.DataAccess", "MS.CatMatching.DataAccess\MS.CatMatching.DataAccess.csproj", "{EECE68EF-E77F-4200-A952-43AFA9394F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.Services", "MS.CatMatching.Services\MS.CatMatching.Services.csproj", "{89E9B195-F197-437F-9B04-73BBC5270464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.Entities", "MS.CatMatching.Entities\MS.CatMatching.Entities.csproj", "{0EDF55FB-27DA-4A44-876E-FEB825C48774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.Contracts", "MS.CatMatching.Contracts\MS.CatMatching.Contracts.csproj", "{445B7B43-12D5-45CD-BDC4-A002846E5AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.Tests", "MS.CatMatching.Tests\MS.CatMatching.Tests.csproj", "{1BFB8A93-A5C6-40EC-9C4A-0285F93A377A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.CatMatching.Web", "MS.CatMatching.Web\MS.CatMatching.Web.csproj", "{F674DAA9-C2D2-4738-913F-09B0DB4CC77C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{57AE9E50-7084-4455-9BCA-700993F024C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57AE9E50-7084-4455-9BCA-700993F024C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57AE9E50-7084-4455-9BCA-700993F024C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECE68EF-E77F-4200-A952-43AFA9394F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECE68EF-E77F-4200-A952-43AFA9394F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECE68EF-E77F-4200-A952-43AFA9394F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECE68EF-E77F-4200-A952-43AFA9394F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E9B195-F197-437F-9B04-73BBC5270464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E9B195-F197-437F-9B04-73BBC5270464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E9B195-F197-437F-9B04-73BBC5270464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E9B195-F197-437F-9B04-73BBC5270464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDF55FB-27DA-4A44-876E-FEB825C48774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDF55FB-27DA-4A44-876E-FEB825C48774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDF55FB-27DA-4A44-876E-FEB825C48774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDF55FB-27DA-4A44-876E-FEB825C48774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445B7B43-12D5-45CD-BDC4-A002846E5AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445B7B43-12D5-45CD-BDC4-A002846E5AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445B7B43-12D5-45CD-BDC4-A002846E5AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445B7B43-12D5-45CD-BDC4-A002846E5AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFB8A93-A5C6-40EC-9C4A-0285F93A377A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFB8A93-A5C6-40EC-9C4A-0285F93A377A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFB8A93-A5C6-40EC-9C4A-0285F93A377A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFB8A93-A5C6-40EC-9C4A-0285F93A377A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F674DAA9-C2D2-4738-913F-09B0DB4CC77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F674DAA9-C2D2-4738-913F-09B0DB4CC77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F674DAA9-C2D2-4738-913F-09B0DB4CC77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F674DAA9-C2D2-4738-913F-09B0DB4CC77C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
