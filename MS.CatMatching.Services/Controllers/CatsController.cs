@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MS.CatMatching.Entities;
+using Newtonsoft.Json;
 
 namespace MS.CatMatching.Services.Controllers
 {
@@ -10,36 +14,38 @@ namespace MS.CatMatching.Services.Controllers
     [ApiController]
     public class CatsController : ControllerBase
     {
-        // GET api/values
+        // GET api/cats
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<Cat>>> GetAsync()
         {
-            return new string[] { "value1", "value2" };
-        }
+            HttpClient client = new HttpClient
+            {
+                BaseAddress = new Uri("https://latelier.co")
+            };
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = await client.GetAsync("/data/cats.json");
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
+            if (response.IsSuccessStatusCode)
+            {
+                var cats = new List<Cat>();
+                var data = await response.Content.ReadAsAsync<CatsImageCollection>();
+                foreach (var cat in data.CatImages)
+                {
+                    cats.Add(new Cat
+                    {
+                        Id = 1,
+                        Name = $"Cat - {cat.ExternalId}",
+                        Image = cat
+                    });
+                }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+                return Ok(data);
+            }
+            else
+            {
+                //Something has gone wrong
+            }
+            return Ok();
         }
     }
 }
