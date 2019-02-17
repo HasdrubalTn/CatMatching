@@ -39,7 +39,7 @@ namespace MS.CatMatching.Services.Controllers
                     });
                 }
 
-                return Ok(data);
+                return Ok(cats);
             }
             else
             {

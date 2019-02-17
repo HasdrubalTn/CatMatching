@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MS.CatMatching.Services</name>
+    </assembly>
+    <members>
+        <member name="M:MS.CatMatching.Services.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            This method gets called by the runtime. Use this method to add services to the container.
+        </member>
+        <member name="M:MS.CatMatching.Services.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        </member>
+    </members>
+</doc>
