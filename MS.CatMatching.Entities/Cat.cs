@@ -14,6 +14,9 @@ namespace MS.CatMatching.Entities
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        [JsonProperty("votes")]
+        public int Votes { get; set; }
+
         [JsonProperty("image")]
         public CatImage Image { get; set; }
     }

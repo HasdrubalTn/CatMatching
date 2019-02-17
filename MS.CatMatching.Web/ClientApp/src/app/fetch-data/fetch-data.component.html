@@ -1,24 +1,25 @@
-<h1>Weather forecast</h1>
+  <p *ngIf="!cats"><em>Loading...</em></p>
 
-<p>This component demonstrates fetching data from the server.</p>
+  <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height: 100vh">
+      <div fxLayout="row wrap">
+        <div
+          *ngFor="let cat of cats"
+          fxFlex="25"
+          fxFlex.md="33"
+          fxFlex.sm="50"
+          fxFlex.xs="100"
+          fxLayout="column"
+          style="padding: 5px;">
+          <mat-card class="mat-elevation-z1">
+            <img mat-card-image [src]="cat.image.url" height="200px"/>
+            <mat-card-title> {{ cat.votes }} - {{ cat.name }} </mat-card-title>
+            <mat-card-content> {{ cat.name }} </mat-card-content>
+            <mat-card-footer>
+              <!-- footer here -->
+            </mat-card-footer>
+          </mat-card>
+        </div>
+      </div>
+    </div>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
 
-<table class='table table-striped' *ngIf="forecasts">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.dateFormatted }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
-    </tr>
-  </tbody>
-</table>

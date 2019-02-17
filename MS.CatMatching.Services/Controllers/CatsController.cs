@@ -18,6 +18,8 @@ namespace MS.CatMatching.Services.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cat>>> GetAsync()
         {
+            var random = new Random(100);
+
             HttpClient client = new HttpClient
             {
                 BaseAddress = new Uri("https://latelier.co")
@@ -35,11 +37,12 @@ namespace MS.CatMatching.Services.Controllers
                     {
                         Id = 1,
                         Name = $"Cat - {cat.ExternalId}",
-                        Image = cat
+                        Image = cat,
+                        Votes = random.Next(1, 100)
                     });
                 }
 
-                return Ok(cats);
+                return Ok(cats.OrderByDescending(x => x.Votes));
             }
             else
             {

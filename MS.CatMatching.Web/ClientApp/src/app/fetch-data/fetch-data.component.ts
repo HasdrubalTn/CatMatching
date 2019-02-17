@@ -15,14 +15,3 @@ export class FetchDataComponent {
     }, error => console.error(error));
   }
 }
-
-interface Cat {
-  Id: string;
-  Name: number;
-  Image: CatImage;
-}
-
-interface CatImage {
-  Id: string;
-  Url: string;
-}
