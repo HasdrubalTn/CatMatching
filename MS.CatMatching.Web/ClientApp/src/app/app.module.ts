@@ -13,6 +13,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { VoteComponent } from './vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFor
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    VoteComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -36,7 +38,7 @@ import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFor
     FlexLayoutModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
+      { path: 'vote', component: VoteComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
