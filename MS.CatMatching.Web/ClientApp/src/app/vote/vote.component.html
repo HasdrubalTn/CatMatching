@@ -4,14 +4,14 @@
     <div fxLayout="row wrap">
       <div
         *ngFor="let cat of cats"
-        fxFlex="25"
+        fxFlex="50"
         fxFlex.md="33"
         fxFlex.sm="50"
         fxFlex.xs="100"
         fxLayout="column"
         style="padding: 5px;">
-        <mat-card class="mat-elevation-z1">
-          <img mat-card-image [src]="cat.image.url" height="200px"/>
+      <mat-card class="mat-elevation-z1" (click)="vote(cat)" >
+          <img mat-card-image [src]="cat.image.url" height="500px" width="500px"/>
           <mat-card-title> {{ cat.name }} </mat-card-title>
           <mat-card-footer>
             <!-- footer here -->

@@ -101,5 +101,13 @@ namespace MS.CatMatching.Services.Controllers
 
             return Ok(new Cat[] { first.FirstOrDefault(), second.FirstOrDefault() });
         }
+
+        // GET api/cats/random
+        [HttpPost]
+        [Route("vote")]
+        public async Task<ActionResult> PostVoteAsync([FromBody] int id)
+        {
+            return Ok();
+        }
     }
 }
